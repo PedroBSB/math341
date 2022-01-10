@@ -32,3 +32,17 @@ numerator/sample_size
 #Compute the probability of P(Z<= 1.27):
 pnorm(1.27,mean=0,sd=1)
 
+
+#Compute the probability of P(Z> -1):
+pnorm(-1,mean=0,sd=1,lower.tail = FALSE)
+#Or
+1-pnorm(-1,mean=0,sd=1)
+
+#Compute the probability of P(-2.50 <= Z <= -1) = P(Z <= -1) - P(Z<=-2.50):
+pnorm(-1,mean=0,sd=1) - pnorm(-2.5,mean=0,sd=1)
+
+#Find the percentile P95 of a standard normal distribution
+qnorm(0.95,mean=0,sd=1)
+
+#Find the value of Z_{0.025}
+qnorm(1-0.025,mean=0,sd=1)
