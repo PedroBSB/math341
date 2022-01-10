@@ -26,3 +26,9 @@ for(sample in 1:sample_size){
 
 #Final probability
 numerator/sample_size
+
+
+##########   Standard Normal Distribution   ##########   
+#Compute the probability of P(Z<= 1.27):
+pnorm(1.27,mean=0,sd=1)
+
