@@ -26,3 +26,12 @@ for(sample in 1:sample_size){
 
 #Final probability
 numerator/sample_size
+
+########## Brand Recognition
+consumers = rbinom(50,size=1,prob=0.95) #1 means recognize the brand
+
+########## Shaquille O’Neal
+next_free_throw = rbinom(1,size=1,prob=0.527) #1 means The free throw is made
+
+
+
