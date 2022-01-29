@@ -15,7 +15,7 @@ numerator = 0
 for(sample in 1:sample_size){
   #Generate 25 random numbers between 1 and 365
   list_days = seq(1,365)
-  numbers = sample(list_days, size = 25, replace = TRUE)
+  numbers = sample(list_days, size = 11, replace = TRUE)
   
   #Count equal numbers
   equal = !(length(unique(numbers)) == length(numbers))
@@ -26,6 +26,13 @@ for(sample in 1:sample_size){
 
 #Final probability
 numerator/sample_size
+
+#McDonalds
+rbinom(1000,1,0.95)
+
+#Shaquille O'Neal
+rbinom(1,1,0.527)
+
 
 
 ##########   Standard Normal Distribution   ##########   
