@@ -34,3 +34,20 @@ samples = expand.grid(rep(list(c(4,5,8)), 2))
 sample_mean = (samples[,1]+samples[,2])/2
 #Plot the graph
 hist(sample_mean)
+
+
+
+#Exact probability
+1-pbinom(14,100,0.2)
+
+#Normal Approximation (no CC)
+1-pnorm(-6/4)
+
+#Normal Approximation(with CC)
+1-pnorm(-1.375)
+
+
+
+
+
+
