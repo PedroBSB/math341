@@ -69,3 +69,20 @@ ladd( panel.abline(v=qt(1-alpha,df=n1+n2-2),col='red') )
 D0 = 5
 T = ((x_bar1-x_bar2)-D0)/(sp*sqrt(1/n1+1/n2))
 ladd( panel.abline(v=T,col='purple',lwd=5) )
+
+#Paired data
+garage_1 = c(17.6,20.2,19.5,11.3,13.0,16.3,15.3,16.2,12.2,14.8,21.3,22.1,16.9,17.6,18.4)
+garage_2 = c(17.3,19.1,18.4,11.5,12.7,15.8,14.9,15.3,12.0,14.2,21.0,21.0,16.1,16.7,17.5)
+
+#Descriptive Analysis
+plot(garage_1,garage_2)
+cor(garage_1,garage_2)
+cov(garage_1,garage_2)
+
+#More interesting plot
+# Add regression line
+plot(garage_1, garage_2, main = "Garage exercise",
+     xlab = "Garage 1", ylab = "Garage 2",
+     pch = 19, frame = FALSE)
+#Add the linear regression
+abline(lm(garage_2 ~ garage_1), col = "blue")
