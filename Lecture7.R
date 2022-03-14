@@ -43,10 +43,10 @@ UB=(x_bar1-x_bar2)+qt(1-alpha/2,df=n1+n2-2)*sp*sqrt(1/10+1/10)
 
 
 ##Example 4:  An experiment was conducted to evaluate the effectiveness of a treatment for tapeworm in the stomachs of sheep.
-x1 = c(18,43,28,50,16,32,13,35,38,33,6,7)
-x2 = c(40,54,26,63,21,37,39,23,48,58,28,39)
+x2 = c(18,43,28,50,16,32,13,35,38,33,6,7)
+x1 = c(40,54,26,63,21,37,39,23,48,58,28,39)
 
-alpha = 0.025
+alpha = 0.05
 #Compute the summary statistics (X1)
 n1 = length(x1)
 x_bar1 = mean(x1)
@@ -63,10 +63,9 @@ sp = sqrt(((n1-1)*s1.2+(n2-1)*s2.2)/(n1+n2-2))
 
 #Find the Critical region: #Distribution under the null hypothesis
 plotDist('t', df=n1+n2-2)
-ladd( panel.abline(v=qt(alpha/2,df=n1+n2-2),col='red') )
-ladd( panel.abline(v=qt(1-alpha/2,df=n1+n2-2),col='red') )
+ladd( panel.abline(v=qt(1-alpha,df=n1+n2-2),col='red') )
 
 #Find the test statistic
 D0 = 5
-T = ((x_bar2-x_bar1)-D0)/(sp*sqrt(1/n1+1/n2))
+T = ((x_bar1-x_bar2)-D0)/(sp*sqrt(1/n1+1/n2))
 ladd( panel.abline(v=T,col='purple',lwd=5) )
